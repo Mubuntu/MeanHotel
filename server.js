@@ -16,8 +16,13 @@ app.use(function(req, res, next) {
 });
 
 // Set static directory before defining routes
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(path.join(__dirname, '/public')));
+//app.use(express.static(path.join(__dirname, 'node_modules')));
+// application -------------------------------------------------------------
+app.get('*', function (req,res) {
+    res.render('./public/index.html');
+    // load the single view file (angular will handle the page changes on the front-end)
+});
 // Enable parsing of posted forms
 app.use(bodyParser.urlencoded({ extended: false }));
 

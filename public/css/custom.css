@@ -20,3 +20,7 @@
     background-color: #f5f5f5;
     padding-top: 20px;
   }
+
+  .ng-cloack[ng-cloack], [ng\:cloack] { /* angular wordt pas ingeladen als het volledig is gebootstrapt (dus geen irritante curly brackets)*/
+    display: none !important;
+  }

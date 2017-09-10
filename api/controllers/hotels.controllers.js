@@ -227,6 +227,7 @@ module.exports.hotelsDeleteOne = function (req, res) {
         .exec(function (err, hotel) {
             //204 bij een juiste delete
             //var deletedHotel;
+            //hotel wordt bij 204 niet teruggegeven als json
             if (err) {
                 res
                     .status(404)

@@ -2,24 +2,24 @@
   "name": "mean-app",
   "version": "1.0.0",
   "description": "MEAN stack application",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fullstacktraining/mean-stack-hero.git"
+    "url": "git+https://github.com/Mubuntu/MeanHotel"
   },
   "keywords": [
     "mean"
   ],
-  "author": "Full Stack Training",
+  "author": "Patrick Frison",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fullstacktraining/mean-stack-hero/issues"
+    "url": "https://github.com/Mubuntu/MeanHotel/issues"
   },
-  "homepage": "https://github.com/fullstacktraining/mean-stack-hero#readme",
+  "homepage": "https://github.com/Mubuntu/MeanHotel#readme",
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
@@ -28,7 +28,12 @@
   },
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-notify": "^0.4.5",
     "mocha": "^2.3.3"
   }
 }

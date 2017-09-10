@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MEAN hotel</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="css/custom.css" rel="stylesheet"/>
-</head>
-<body>
+    <base href="/" />
+    <title>MEAN hotel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/custom.css" rel="stylesheet"/>
+    <script src=""></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/MainCtrl.js"></script>
 
-  <h1>MEAN hotel homepage</h1>
+/</head>
+<body ng-cloak=""  ng-app="myApp">
 
-  <footer class="footer">
-    <div class="container">
-      <p class="text-muted text-center">
-        <a href="http://fullstacktraining.com" target="_blank"><img src="/images/fullstacktraining_logo.png" height="26" alt="Full Stack Training"/></a>
-      </p>
-
-      <p class="text-muted text-center">
-        <small>&copy; 2016 Full Stack Training Ltd</small>
-      </p>
+<h1>MEAN hotel homepage</h1>
+<div ng-init="name = 'patrick'">
+    hey <p ng-bind="name"></p>
+    {{1+2}}
+    <div ng-init=" rebels = [{name: 'Luke Skywalker', profession:'Jedi', weapon: 'lightsaber', age:19},
+    {name: 'Obi Wan Kenobi', profession:'Jedi', weapon: 'lightsaber', age:56},
+    {name: 'Han Solo', profession:'Smuggler', weapon: 'blaster', age:32},
+    {name: 'Chewbacca', profession:'pilot', weapon: 'bowcaster', age: 200}]">
+        <select ng-model="rebel" id=""
+                ng-options="rebel.name group by rebel.weapon for rebel in rebels "></select>
+        <p>you have selected: {{rebel.name}} ({{rebel.profession}})</p>
     </div>
-  </footer>
+</div>
+<div ng-view ></div>
 
-  <script src="jquery/jquery-2.1.4.min.js"></script>
 
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted text-center">
+            <a href="http://fullstacktraining.com" target="_blank"><img src="/images/fullstacktraining_logo.png"
+                                                                        height="26" alt="Full Stack Training"/></a>
+        </p>
+
+        <p class="text-muted text-center">
+            <small>&copy; 2016 Full Stack Training Ltd</small>
+        </p>
+    </div>
+</footer>
+
+
+<script>
+
+
+</script>
 </body>
 </html>
