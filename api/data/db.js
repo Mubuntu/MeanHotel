@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 var dburl = 'mongodb://localhost:27017/meanhotel';
+
 var retry = null;
-mongoose.connect(dburl, {
+mongoose.connect(process.env.MONGOLAB_URI || dburl, {
     useMongoClient: true
 });
 
