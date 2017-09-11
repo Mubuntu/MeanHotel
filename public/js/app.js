@@ -1,12 +1,12 @@
 angular.module('myApp', ['ngRoute']).config(config);
 function config($routeProvider) {
-    $routeProvider.when('/main', {
+    $routeProvider.when('/films', {
         templateUrl: '../templates/main.htm',
         controller: 'MainCtrl',
         controllerAs: 'vm'
-    }).when('/about', {
+    }).when('/films/:id', {
         templateUrl: '../templates/about.htm',
-        controller: 'AboutController',
+        controller: 'FilmCtrl',
         controllerAs: 'vm'
     })
         .otherwise({

@@ -1,0 +1,6 @@
+<h1> {{vm.title}}</h1>
+
+<ul>
+    <!-- sinds angular 1.6.6 moet je de exclamation mark gebruiken voor security reasons -->
+    <li ng-repeat="hotel in vm.hotels"><a ng-href="#!/hotel/{{hotel._id}}">{{hotel.name}}</a></li>
+</ul>

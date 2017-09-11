@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="hotelApp">
 <head>
-    <base href="/" />
+    <base href="/"/>
     <title>MEAN hotel</title>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
     <link href="css/custom.css" rel="stylesheet"/>
-    <script src=""></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/MainCtrl.js"></script>
 
-/</head>
-<body ng-cloak=""  ng-app="myApp">
 
+    <!-- <script src=""></script>
+     <script src="bower_components/angular/angular.min.js"></script>
+     <script src="bower_components/angular-route/angular-route.js"></script>
+     <script src="js/app.js"></script>
+     <script src="js/Controllers/MainCtrl.js"></script>
+     <script src="js/Controllers/FilmCtrl.js"></script>
+     <script src="js/DataFactory/FilmFactory.js"></script>
+     <script src="js/filters/reversefilter/reverse-filter.js"></script>
+     <script src="js/filters/date-suffix/date-suffix.js"></script>-->
+</head>
+<body ng-cloak="" >
+
+<mh-navigation></mh-navigation>
+<div class="container">
+    <div ng-view></div>
+</div>
+<!--
 <h1>MEAN hotel homepage</h1>
 <div ng-init="name = 'patrick'">
     hey <p ng-bind="name"></p>
@@ -28,6 +39,7 @@
     </div>
 </div>
 <div ng-view ></div>
+-->
 
 
 <footer class="footer">
@@ -42,11 +54,16 @@
         </p>
     </div>
 </footer>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-route/angular-route.min.js"></script>
+<script src="angular/app.js"></script>
 
-
-<script>
-
-
-</script>
+<script src="angular/hotel-list/hotel-list-controller.js"></script>
+<script src="angular/hotel-display/hotel-display-controller.js"></script>
+<script src="angular/HotelDataFactory/HotelDataFactory.js"></script>
+<script src="angular/hotel-rating/hotel-rating-directive.js"></script>
+<script src="angular/register/registercontroller.js"></script>
+<script src="angular/navigation-directive/navigation-directive.js"></script>
+<script src="angular/login/LoginController.js"></script>
 </body>
 </html>

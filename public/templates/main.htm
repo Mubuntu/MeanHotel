@@ -1,4 +1,12 @@
-<h1> this is the main page</h1>
+<h1>Hello {{vm.name | reverse}}</h1>
+<br>
+<br>
+<p> {{vm.date1|dateSuffix}}</p>
+<p> {{vm.date2|dateSuffix}}</p>
+<p> {{vm.date3|dateSuffix}}</p>
+<p> {{vm.date4|dateSuffix}}</p>
+<p> {{vm.date5|dateSuffix}}</p>
+
 <ul>
     <li ng-repeat="film in vm.films">{{film.title}}</li>
 </ul>

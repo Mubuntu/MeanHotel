@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/Mubuntu/MeanHotel#readme",
   "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
+    "jsonwebtoken": "^8.0.0",
     "mongodb": "^2.1.7",
     "mongoose": "^4.11.10"
   },

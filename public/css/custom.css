@@ -8,6 +8,9 @@
     /* Margin bottom by footer height */
     margin-bottom: 90px;
   }
+  body > .container {
+    padding-top: 60px;
+  }
   .padded {
     padding-top: 30px
   }
@@ -24,3 +27,4 @@
   .ng-cloack[ng-cloack], [ng\:cloack] { /* angular wordt pas ingeladen als het volledig is gebootstrapt (dus geen irritante curly brackets)*/
     display: none !important;
   }
+
