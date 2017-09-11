@@ -1,33 +1,55 @@
-angular.module('hotelApp', ['ngRoute'])
+angular.module('hotelApp', ['ngRoute', 'angular-jwt']).config(config).run(run);
 
-    .config(config)
+function config($httpProvider, $routeProvider) {
+    $httpProvider.interceptors.push('AuthInterceptor');
 
-//routing
-function config($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'angular/main/welcome.html'
+            templateUrl: 'angular/main/welcome.html',
+            access: {
+                restricted: false
+            }
         })
         .when('/hotels', {
-
-            templateUrl: 'angular/hotel-list/Hotels.html',
+            templateUrl: 'angular/hotel-list/hotels.html',
             controller: HotelsController,
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            access: {
+                restricted: false
+            }
         })
-
         .when('/hotel/:id', {
             templateUrl: 'angular/hotel-display/hotel.html',
             controller: HotelController,
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            access: {
+                restricted: false
+            }
         })
         .when('/register', {
             templateUrl: 'angular/register/register.html',
             controller: RegisterController,
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            access: {
+                restricted: false
+            }
+        })
+        .when('/profile', {
+            templateUrl: 'angular/profile/profile.html',
+            access: {
+                restricted: true
+            }
         })
         .otherwise({
             redirectTo: '/'
         });
-
 }
 
+function run($rootScope, $location, $window, AuthFactory) {
+    $rootScope.$on('$routeChangeStart', function (event, nextRoute, currentRoute) {
+        if (nextRoute.access !== undefined && nextRoute.access.restricted && !$window.sessionStorage.token && !AuthFactory.isLoggedIn) {
+            event.preventDefault();
+            $location.path('/');
+        }
+    });
+}

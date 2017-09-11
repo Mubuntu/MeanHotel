@@ -18,7 +18,7 @@
      <script src="js/filters/reversefilter/reverse-filter.js"></script>
      <script src="js/filters/date-suffix/date-suffix.js"></script>-->
 </head>
-<body ng-cloak="" >
+<body ng-cloak="">
 
 <mh-navigation></mh-navigation>
 <div class="container">
@@ -45,17 +45,18 @@
 <footer class="footer">
     <div class="container">
         <p class="text-muted text-center">
-            <a href="http://fullstacktraining.com" target="_blank"><img src="/images/fullstacktraining_logo.png"
-                                                                        height="26" alt="Full Stack Training"/></a>
+            <a href="http://fullstacktraining.com" target="_blank"><img src="https://i.imgur.com/8uOMzYm.png"
+                                                                        height="40" alt="Full Stack Demo"/></a>
         </p>
 
         <p class="text-muted text-center">
-            <small>&copy; 2016 Full Stack Training Ltd</small>
+            <small>&copy; 2017 Full Stack Demo Patrick Frison</small>
         </p>
     </div>
 </footer>
-<script src="../node_modules/angular/angular.min.js"></script>
-<script src="../node_modules/angular-route/angular-route.min.js"></script>
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../node_modules/angular-route/angular-route.js"></script>
+<script src="../node_modules/angular-jwt/dist/angular-jwt.js"></script>
 <script src="angular/app.js"></script>
 
 <script src="angular/hotel-list/hotel-list-controller.js"></script>
@@ -65,5 +66,7 @@
 <script src="angular/register/registercontroller.js"></script>
 <script src="angular/navigation-directive/navigation-directive.js"></script>
 <script src="angular/login/LoginController.js"></script>
+<script src="angular/auth/auth-factory.js"></script>
+<script src="angular/auth/auth-interceptor.js"></script>
 </body>
 </html>
